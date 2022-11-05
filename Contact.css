@@ -1,0 +1,124 @@
+
+.contact {
+    
+    display: flex;
+    
+    
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    
+    flex-direction: column;
+    width: 100%;
+    margin-top: 48;
+    
+    
+    
+}
+
+
+
+.topForm {
+    width:100%;
+    
+    
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    
+    
+    
+
+}
+
+.topForm > label {
+    width:100%;
+    
+  margin-top: 48px;
+  display: flex;
+    
+    
+    justify-content: flex-start;
+
+    
+
+}
+
+.topForm >input {
+   
+    
+    margin-top: 48;
+   
+    
+    justify-content: flex-start;
+    
+
+    
+}
+
+
+.start {
+    width: 100%;
+    
+    
+    margin-top: 48px;
+   
+    justify-content:space-between;
+    display: flex;
+    row-gap: 2px;
+    flex-direction: row;
+
+   
+}
+
+.check {
+    width:100%;
+    
+    margin-top: 48;
+   
+    justify-content:flex-start;
+    display: flex;
+}
+
+.sub {
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topForm > textarea {
+    width:100%;
+    
+    
+   
+    justify-content: flex-start;
+
+}
+
+button {
+    margin-top: 20px;
+    border-color: blue;
+    width: 100%;
+    color: #FFFFFF;
+}
+
+@media screen and (max-width: 500px) {
+     input.inp1, input.inp2, span.start {
+        
+        
+        width:100%;
+        flex-direction: column;
+        display: flex;
+        justify-content: flex-start;
+        
+        
+        
+         
+    }
+}
+
+
+
+
