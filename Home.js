@@ -8,9 +8,9 @@ import { Avatar } from "primereact/avatar";
 import "primeflex/primeflex.css";
 import { Button } from "primereact/button";
 
+
 import iconSvg from "./img/Icon.svg";
-import iconSlack from "./img/slack.svg";
-import yourGithub from "./img/github.svg";
+
 
 
 
@@ -56,7 +56,7 @@ function Home() {
                                     fontWeight: "500",
                                     fontSize: "18px",
                                     lineHeight: "28px",color: "black", textDecoration:"none"}} >
-                                      <span className="p-px-4" id="Twitter" > Twitter Link @PhilipNnamani </span>
+                                    <span  id="Twitter" > <p>Twitter Link @PhilipNnamani</p> </span>
                                      </a> 
                               </Button>
                             
@@ -69,7 +69,7 @@ function Home() {
                               fontSize: "18px",
                               lineHeight: "28px", color: "black", textDecoration:"none", width: "1152px",
                               height: "76px"}} >
-                                      <span className="p-px-2" id="btn__zuri"> Zuri Team </span>
+                                      <span  id="btn__zuri"><p>Zuri Team </p></span>
                               </a>
                               </Button>
                             
@@ -82,7 +82,7 @@ function Home() {
                               fontWeight: "500",
                               fontSize: "18px",
                               lineHeight: "28px", color: "black", textDecoration:"none"}} >      
-                                      <span className="p-px-2" id="books"  > Zuri Books </span>
+                                      <span  id="books"  ><p> Zuri Books</p> </span>
                                       </a>
                               </Button>
                               
@@ -96,7 +96,7 @@ function Home() {
                                           lineHeight: "28px", color: "black", textDecoration:"none", width: "1152px",
                                           height: "76px",width: "1152px",
                                      height: "76px",color: "black", textDecoration:"none"}}>
-                                      <span className="p-px-2" id="book__python"> Python Books </span>
+                                      <span  id="book__python"><p> Python Books </p> </span>
                                       </a>
                               </Button>
                               
@@ -110,7 +110,7 @@ function Home() {
                                     fontSize: "18px",
                                     lineHeight: "28px", color: "black", textDecoration:"none", width: "1152px",
                                     height: "76px"}} > 
-                                      <span className="p-px-2" id="pitch" > Background Checks for Coders </span>
+                                      <span  id="pitch" ><p> Background Checks for Coders</p> </span>
                                       </a>
                               </Button>
                               
@@ -124,7 +124,7 @@ function Home() {
                                    fontSize: "18px",
                                    lineHeight: "28px", color: "black", textDecoration:"none", width: "1152px",
                                    height: "76px"}}>
-                                      <span className="p-px-2" id="book__design" > Design Books </span>
+                                      <span  id="book__design" ><p> Design Books </p></span>
                                     </a>
                               </Button>
 
@@ -139,29 +139,30 @@ function Home() {
                                       height: "76px"}}>
 
                                       
-                                     <span className="p-px-2" id="contact" > Contact Me</span>   
+                                     <span  id="contact" ><p> Contact Me </p></span>   
                                        </Link>
                                        
                                       
                               </Button>
                               
+                            
 
-                             
                               
-                                    <div style={{paddingTop:"6%", paddingBottom:"12%",width:"100%", alignItems:"center", display:"flex", justifyContent:"center", flexDirection:"row", flexWrap:"wrap"  }}>
-                                  <a href="https://slack.com/" id="@Lotanna" target="_blank" rel="noopener noreferrer"style={{width:"10%", alignItems:"center", marginLeft:"5%"}} >
-                                      <img src={iconSlack} style={{marginRight:"10%", width:"30%",  }}  />
-                                        
-                                      <img src={yourGithub} style={{width:"30%",  }}  />
-                                    </a>
-                                    </div>
+
+                           
                               
                               
-                          </div>
-                    </div>
-          </div>          
-                   
-       
+                              
+                          
+                    
+                                   </div>
+                                   </div> 
+          
+                                   
+
+                                              
+              
+     </div>  
   )
 }
 

@@ -16,6 +16,8 @@ import "./app.css";
 import Home from "./Home";
 import Contact from "./Contact";
 import Footer from "./Footer";
+import Logg from "./Logg"
+
 
 
 
@@ -37,6 +39,7 @@ function App() {
 
                       
                     <Home />
+                    <Logg />
                     <Footer />
 
                 </Fragment>

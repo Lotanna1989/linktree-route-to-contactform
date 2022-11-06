@@ -17,16 +17,17 @@ function Contact() {
   
   const {register, formState: {errors}, handleSubmit} = useForm();
   const onSubmit = (data) => console.log(data);
+ 
+  
   
 
   return (
     
-    <div style={{width: "1440px",
+    <div style={{width: "740px",
     }}>
-    <form onSubmit={handleSubmit(onSubmit)}>
-    <div  style={{ backgroundColor: "",
-        display: "flex",
-    flexDirection: "column",
+    <form id="form" onSubmit={handleSubmit(onSubmit)}>
+    <div className='main'  style={{ display: "flex",
+    
     justifyContent: "center",
     alignItems:"center",
     
@@ -40,58 +41,160 @@ function Contact() {
     
     boxsizing:"borderBox",
     flexWrap: "wrap",
-    overflow:"hidden"}}>
+    overflow:"hidden",
+        }}>
                 
 
-                    <div  style={{marginTop:"10%",marginBottom:"10%",width:"50%",  display:"flex",  justifyContent:"flex-start", flexDirection:"column",  }}  >
-                    <div className='contact'>
-                            <h2> Contact Me</h2>
-                            <p> Hi there, contact me to ask me about anything you have in mind.</p>
+                    <div  style={{marginTop:"10%",marginBottom:"8%",width:"96%",  display:"flex",  justifyContent:"flex-start", flexDirection:"column", left: "0px",
+                    top: "0px", padding: "64px 0px 96px 0px",
+                    gap: "64px" }}  >
+                    <div className='contact' style={{width:"100%", paddingLeft:"30px"}}>
+                            <h2 style={{fontWeight:"600",
+                            fontSize: "36px",
+                            lineheight: "44px",
+                            /* identical to box height, or 122% */
+                            
+                            letterSpacing: "-0.02em", width:"100%"}} > Contact Me</h2>
+                            <p className='topP'> Hi there, contact me to ask me about anything you have in mind.</p>
                     </div>
 
-                    <div className='topForm' >
-                    <span className='start'>
+                    <div className='topForm' style={{padding:"30px", marginBottom:"40px", width:"100%"}} >
+                    
+                    
+                     
+                     <div  style={{ marginBottom:"25px",  width:"100%",display:"flex", justifyContent:"space-between", flexDirection:"row", flexWrap:"wrap"}}>
+                        <div  style={{width:"380px", marginBottom:"25px"}}>
+                      <label  >Firstname </label>
+                    
+                    <input id='first_name'  {...register("firstname", {required: true})} style={{
+                      marginRight:"",border:" 1px solid #D0D5DD", boxSizing: "border-box",
+
+                      /* Auto layout */
                       
+                      display: "flex",
+                      flexDirection: "row",
+                      alignitems: "center",
+                      padding: "10px 14px",
+                      gap: "8px",
+                      
+                      width:"100%",
+                      height: "44px",
+                      
+                      /* Base/White */
+                      
+                      background: "#FFFFFF",
+                      /* Gray/300 */
+                      
+                      border:" 1px solid #D0D5DD",
+                      /* Shadow/xs */
+                      
+                      boxShadow: "0px 1px 2px rgba(16, 24, 40, 0.05)",
+                      borderRadius: "8px",
+                      
+                      /* Inside auto layout */
+                      flex: "none",
+                      order: "1",
+                      alignSelf: "stretch",
+                      flexGrow: "0",}} name="firstname"   placeholder='Enter your first name' />
+                      <error>
+                      {errors.firstname?.type === "required" && "firstname please"}</error>
+                    </div>
 
-                      <div className='inpdiv1' style={{ width:"98%"}}>
-                    <label style={{padding:"0", margin:"0", width:"80%"}} id='first_name'>Firstname </label>
+                    <div  style={{width:"380px",}}>
+                   
+                   
+                    <label>Lastname</label>
+                    <input    {...register("lastname", {required: true})} id="last_name" name="lastname"  placeholder='Enter your last name' style={{ borderRadius: "8px",
+                    border:" 1px solid #D0D5DD", width:"98%",borderRadius: "8px",
+                    boxSizing: "border-box",
+
+                    /* Auto layout */
                     
-                    <input  style={{width:"98%",borderRadius: "8px",
-                      border:" 1px solid #D0D5DD"}} name="firstname" {...register("firstname",{required: true})}  placeholder='Enter your first name' />
-                     <error>
-                     {errors.firstname?.type === "required" && "firstname please"}
-                     </error>
+                    display: "flex",
+                    flexDirection: "row",
+                    alignitems: "center",
+                    padding: "10px 14px",
+                    gap: "8px",
+                    
+                    width: "100%",
+                    height: "44px",
+                    
+                    /* Base/White */
+                    
+                    background: "#FFFFFF",
+                    /* Gray/300 */
+                    
+                    border:" 1px solid #D0D5DD",
+                    /* Shadow/xs */
+                    
+                    boxShadow: "0px 1px 2px rgba(16, 24, 40, 0.05)",
+                    borderRadius: "8px",
+                    
+                    /* Inside auto layout */
+                    flex: "none",
+                    order: "1",
+                    alignSelf: "stretch",
+                    flexGrow: "0",}}/>
+                    <error> {errors.lastname?.type === "required" && "lastname please"}</error>
                     </div>
-
-                    <div  style={{width:"98%"}}>
+                   </div>
                    
-                   
-                    <label style={{padding:"0", margin:"0", width:"98%",}} {...register("lastname",{required: true})} id='last_name'>Lastname</label>
-                    <input className='inp2' style={{ width:"100%",borderRadius: "8px",
-                    border:" 1px solid #D0D5DD"}} id="last_name" name="lastname"  placeholder='Enter your last name'  />
-                    {errors.firstname?.type === "required" && "lastname please"} 
-                    </div>
-                   
-                    </span>
-                   
+                    
+                   <div name="email">
                     <label id='email'>Email</label>
-                    <input  style={{width:"100%", borderRadius: "8px",
-                    border:" 1px solid #D0D5DD"}} {...register("email",{required: true})} id="email" type='email'  placeholder='yourname@email.com'/>
-                    {errors.email?.type === "required" && "your email"} 
+                    <input  {...register("email",{required: true})} id="email" name="email" type='email'  placeholder='yourname@email.com' style={{ borderRadius: "8px",
+                    border:" 1px solid #D0D5DD", borderRadius: "8px",
+                    boxSizing: "border-box",
 
+                    /* Auto layout */
+                    
+                    display: "flex",
+                    flexDirection: "row",
+                    alignitems: "center",
+                    padding: "10px 14px",
+                    gap: "8px",
+                    
+                    width: "100%",
+                    height: "44px",
+                    
+                    /* Base/White */
+                    
+                    background: "#FFFFFF",
+                    /* Gray/300 */
+                    
+                    border:" 1px solid #D0D5DD",
+                    /* Shadow/xs */
+                    
+                    boxShadow: "0px 1px 2px rgba(16, 24, 40, 0.05)",
+                    borderRadius: "8px",
+                    
+                    /* Inside auto layout */
+                    flex: "none",
+                    order: "1",
+                    alignSelf: "stretch",
+                    flexGrow: "0", marginBottom:"25px"}}/>
+                    <error> {errors.email?.type === "required" }</error>
+                    </div>
+
+
+
+                    
+                      <div style={{marginBottom:"25px"}} >
                     <label id='message'>Message</label> 
-                    <textarea id='message'  name="message" placeholder="Send me a message and i will reply you as soon as possible" {...register("message",{required: true})} />
-                    {errors.message?.type === "required" && "your message"} 
+                    <textarea {...register("message", {required: true})} id='message'  name="message" placeholder="Send me a message and i will reply you as soon as possible" {...register("message",{required: true})} />
+                    <error> {errors.email?.type === "required"}</error>
+                    </div>
                     
 
-                    <span className='check'>
-                    <input style={{borderRadius: "8px",
-                    border:" 1px solid #D0D5DD"}}  type={"checkbox"} /> <label>You agree to providing your data to name whom will contact you</label>
-                    </span>
+                   <div id="check" style={{marginBottom:"35px"}}>
+                   <span className='check'>
+                   <input  style={{borderRadius: "8px",
+                   border:" 1px solid #D0D5DD"}}  type={"checkbox"} /> <label>You agree to providing your data to Lotanna Nnamani who may contact you</label>
+                   </span>
+                   </div>
                    
-                    <button style={{borderRadius: "8px", 
-                    border:" 1px solid #D0D5DD", backgroundColor:"blue"}}  id="btn__submit" >
-                            Send Message
+                    <button type='submit'  name="btn"  id="btn__submit" >
+                            <p>Send Message</p>
                     </button>
                     
 
